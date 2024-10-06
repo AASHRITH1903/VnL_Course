@@ -65,7 +65,11 @@ class Mapping(nn.Module):
 
     def forward(self, img_embedded, train_mode=False):
         x = self.transformer_encoder(img_embedded)
+
+        print("after transformer: ", x.shape)
         x = self.mapping(x)
+
+        print("after linear: ", x.shape)
 
         x = x.view(
             *(
@@ -163,6 +167,11 @@ class CaptioningModel(nn.Module):
             # TODO: Map image to text space. See class Mapping in this file.
             img_mapped = self.mapping(img_embedded)
 
+            B, E, D = img_mapped.shape
+
+            print("shape of img_mapped: ", img_mapped.shape)
+
+
             # TODO: Obtain <BOS> token embedding. You should get the <BOS> token ID from the tokenizer of GPT-2. Then, the <BOS> token ID is converted to an embedding by an Embedding layer named "wte" in GPT-2.
             # See https://huggingface.co/docs/transformers/model_doc/gpt2.
             # Adjust the dimensions/shape of the bos token embeddding and then, concatenate the <BOS> embedding and mapped image embedding to get a start embedding.
@@ -171,13 +180,14 @@ class CaptioningModel(nn.Module):
             bos_input_id = tokenizer_output['input_ids'][0][0]
 
             gpt2_token_emb_layer = self.text_decoder.model.transformer.wte
-
             bos_emb = gpt2_token_emb_layer(bos_input_id) 
 
-            print("shape of img_mapped: ", img_mapped.shape)
             print("shape of bos_emb: ", bos_emb.shape)
 
-            start_emb = torch.concat([img_mapped, bos_emb], dim=0)
+            # expanding bos embedding to match other dimensions of img embeddings
+            bos_emb = bos_emb.expand(img_mapped.shape[0], 1, bos_emb.shape[0])
+
+            start_emb = torch.concat([img_mapped, bos_emb], dim=1)
 
             return
 
@@ -217,23 +227,28 @@ class CaptioningModel(nn.Module):
     def train_forward(self, img_emb, trg_cap, att_mask):
         # method should get embedded by CLIP images and trg_text without last token.
         # dataset should contain image, embedded image, text
-        return
+        
         x, x_mask = trg_cap[:, :-1], att_mask[:, :-1]
         y = trg_cap[:, 1:]
 
         # TODO: Map image to text space. See class Mapping in this file.
-        # img_mapped = # mapping. Now we are training the model, so the train_model parameter should be set to True
+        # Now we are training the model, so the train_model parameter should be set to True
+        img_mapped = self.mapping(img_emb, train_mode=True) # N, E, embed_size
 
         # N, len, embed_size
         text_emb = self.text_decoder.model.transformer.wte(x)
+
         x = torch.concat([img_mapped, text_emb], dim=1)
         x_mask = torch.concat([torch.ones(x_mask.shape[0], self.ep_len).to(self.device), x_mask], dim=1)
-
+        
         # TODO: Obtain position embedding and add it into token embedding. The position embedding is stored as an Embedding layer named "wpe" in GPT-2.
         # See https://huggingface.co/docs/transformers/model_doc/gpt2.
-        # pos_emb = # obtain position embedding
+        
+        position_ids = torch.arange(0, x.shape[1], dtype=torch.long)
+        pos_emb = self.text_decoder.model.transformer.wpe(position_ids) 
         pos_emb = pos_emb.expand_as(x)
-        # x = # add position embedding to token embedding
+        x = x + pos_emb
+
 
         # TODO: Generate tokens. Note that it is slightly different from codes in forward() function because of attention masks.
         # See https://huggingface.co/docs/transformers/model_doc/gpt2.
