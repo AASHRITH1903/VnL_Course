@@ -168,9 +168,10 @@ class CaptioningModel(nn.Module):
             # Adjust the dimensions/shape of the bos token embeddding and then, concatenate the <BOS> embedding and mapped image embedding to get a start embedding.
             
             tokenizer_output = self.text_decoder.tokenizer('<|endoftext|>', return_tensors='pt')
-            bos_input_id = tokenizer_output['input_ids'][0][0]
+            bos_input_id = tokenizer_output['input_ids'][0].to(self.device)
 
             bos_emb = self.text_decoder.model.transformer.wte(bos_input_id) 
+
             start_emb = torch.concat([img_mapped, bos_emb], dim=0)
 
             tokens = []

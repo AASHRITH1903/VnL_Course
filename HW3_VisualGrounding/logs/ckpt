@@ -1,0 +1,110 @@
+2024-11-11 23:28:41,137 INFO     <__main__.Args object at 0x10799c190>
+2024-11-11 23:28:47,538 INFO     https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt not found in cache, downloading to /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmp72msv5s8
+2024-11-11 23:28:47,815 INFO     copying /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmp72msv5s8 to cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:28:47,815 INFO     creating metadata file for /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:28:47,816 INFO     removing temp file /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmp72msv5s8
+2024-11-11 23:28:47,816 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:28:48,873 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:28:49,091 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:29:09,046 INFO     https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz not found in cache, downloading to /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmpp9tbdqj3
+2024-11-11 23:29:19,880 INFO     copying /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmpp9tbdqj3 to cache at /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2024-11-11 23:29:20,082 INFO     creating metadata file for /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2024-11-11 23:29:20,083 INFO     removing temp file /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmpp9tbdqj3
+2024-11-11 23:29:20,092 INFO     loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2024-11-11 23:29:20,093 INFO     extracting archive file /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmpo5px9q2k
+2024-11-11 23:29:21,732 INFO     Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2024-11-11 23:30:11,171 INFO     loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2024-11-11 23:30:11,176 INFO     extracting archive file /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmp0w48_ccc
+2024-11-11 23:30:12,857 INFO     Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2024-11-11 23:30:14,935 INFO     Num of parameters:149685188
+2024-11-11 23:31:09,404 INFO     loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2024-11-11 23:31:09,406 INFO     extracting archive file /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmpj3y311am
+2024-11-11 23:31:11,140 INFO     Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2024-11-11 23:31:13,054 INFO     Num of parameters:149685188
+2024-11-11 23:36:30,044 INFO     <__main__.Args object at 0x11b716100>
+2024-11-11 23:36:31,418 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:36:32,381 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:36:32,611 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:36:35,056 INFO     loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2024-11-11 23:36:35,057 INFO     extracting archive file /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmpn7dz5leu
+2024-11-11 23:36:36,735 INFO     Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2024-11-11 23:36:38,795 INFO     Num of parameters:149685188
+2024-11-11 23:46:05,813 INFO     <__main__.Args object at 0x1696e1fa0>
+2024-11-11 23:46:07,142 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:46:08,154 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:46:08,368 INFO     loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /Users/aashrith/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2024-11-11 23:46:10,419 INFO     loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2024-11-11 23:46:10,419 INFO     extracting archive file /Users/aashrith/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /var/folders/z8/_9084bwd59j3c9ln84x1klyw0000gn/T/tmpu916qzot
+2024-11-11 23:46:12,197 INFO     Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2024-11-11 23:46:14,131 INFO     Num of parameters:149685188
+2024-11-11 23:46:36,529 INFO     Epoch: [0][0/7122]	Loss 1.5305 (1.5305)	L1_Loss 0.1469 (0.1469)	GIoU_Loss 1.3836 (1.3836)	Accu 0.0000 (0.0000)	Mean_iu 0.0381 (0.0381)	vis_lr 0.00005000	lang_lr 0.00000500	
+2024-11-11 23:46:49,174 INFO     [0/794]	Time 7.623 (7.623)	Data Time 0.000 (0.000)	Accu 0.0000 (0.0000)	Mean_iu 0.1190 (0.1190)	
+2024-11-11 23:46:54,177 INFO     0.000000,0.119021
+2024-11-11 23:46:57,495 INFO     
+Best Accu: 0.000000
+

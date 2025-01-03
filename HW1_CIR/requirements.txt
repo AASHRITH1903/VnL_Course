@@ -1,0 +1,7 @@
+pillow
+joblib
+nltk
+ftfy
+regex
+tqdm
+git+https://github.com/openai/CLIP.git
